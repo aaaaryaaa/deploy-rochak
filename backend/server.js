@@ -298,10 +298,10 @@ app.get('/route', async (req, res) => {
     }
 });
 
-// app.use(express.static('./frontend/build'));
-// app.get('*', (req, res) => {
-//   res.sendFile('./frontend/build', 'index.html');
-// });
+app.use(express.static('./frontend/build'));
+app.get('*', (req, res) => {
+  res.sendFile('./frontend/build', 'index.html');
+});
 
 app.listen(5000, () => {
     console.log('Server is running on port 5000');
