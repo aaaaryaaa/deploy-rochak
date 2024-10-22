@@ -301,9 +301,9 @@ app.get('/route', async (req, res) => {
 const path = require('path');
 
 // Serve the frontend
-app.use(express.static(path.join(__dirname, 'frontend/build')));
+app.use(express.static(path.join(__dirname, './frontend/build')));
 app.get('*', (req, res) => {
- res.sendFile(path.join(__dirname, 'frontend/build', 'index.html'));
+ res.sendFile(path.join(__dirname, './frontend/build', 'index.html'));
 });
 
 app.listen(5000, () => {
